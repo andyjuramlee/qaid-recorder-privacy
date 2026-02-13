@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QAid Recorder - Privacy Policy</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 40px 20px;
+      color: #1a1a1a;
+      line-height: 1.7;
+    }
+    h1 { font-size: 1.8rem; margin-bottom: 0.25rem; }
+    h2 { font-size: 1.2rem; margin-top: 2rem; }
+    .updated { color: #666; font-size: 0.9rem; margin-bottom: 2rem; }
+    ul { padding-left: 1.25rem; }
+    li { margin-bottom: 0.4rem; }
+    a { color: #2563eb; }
+    .highlight { background: #f8f9fa; border-left: 3px solid #2563eb; padding: 12px 16px; margin: 1rem 0; border-radius: 4px; }
+  </style>
+</head>
+<body>
+
+<h1>QAid Recorder &mdash; Privacy Policy</h1>
+<p class="updated">Last updated: February 13, 2026</p>
+
+<div class="highlight">
+  <strong>Summary:</strong> QAid Recorder captures browser interactions solely to generate automated tests. All recorded data is sent exclusively to your self-hosted QAid server. We do not collect, store, or share your data on any third-party or external servers.
+</div>
+
+<h2>1. What This Extension Does</h2>
+<p>QAid Recorder is a browser extension that records your interactions with web pages (clicks, form fills, scrolls, navigation) and sends them to your QAid server instance to generate automated end-to-end Playwright tests.</p>
+
+<h2>2. Data We Collect</h2>
+<p>The extension collects data <strong>only while you are actively recording</strong> (recording must be explicitly started by the user). The following data is captured during a recording session:</p>
+
+<h3>User Activity</h3>
+<ul>
+  <li>Clicks, double-clicks, and hovers on page elements</li>
+  <li>Text typed into form fields (input values)</li>
+  <li>Dropdown selections and checkbox/radio toggles</li>
+  <li>Scroll positions and directions</li>
+  <li>File upload actions</li>
+</ul>
+
+<h3>Website Content</h3>
+<ul>
+  <li>DOM element metadata: tag names, text content, ARIA labels, placeholder values, CSS selectors, and HTML attributes of interacted elements</li>
+  <li>This metadata is used to generate stable test selectors &mdash; full page content is not captured</li>
+</ul>
+
+<h3>Web History</h3>
+<ul>
+  <li>URLs of pages visited during the recording session</li>
+  <li>Navigation events (page loads, redirects) that occur while recording</li>
+</ul>
+
+<h3>Authentication Information</h3>
+<ul>
+  <li><strong>API key:</strong> A server-generated key you configure to authenticate the extension with your QAid server</li>
+  <li><strong>Session cookies:</strong> When recording on login-protected sites, session cookies may be obtained from your QAid server and set on your browser to enable authenticated recording</li>
+</ul>
+
+<h2>3. Data We Do NOT Collect</h2>
+<ul>
+  <li>Personally identifiable information (name, email, address)</li>
+  <li>Browsing activity outside of active recording sessions</li>
+  <li>Passwords or login credentials (session cookies are handled; raw passwords are not)</li>
+  <li>Financial or payment information</li>
+  <li>Location or geolocation data</li>
+  <li>Health information</li>
+</ul>
+
+<h2>4. Where Data Is Stored</h2>
+<ul>
+  <li><strong>Locally:</strong> Recording state and extension settings are stored in <code>chrome.storage.local</code> on your device. This data persists between browser sessions and is cleared when the extension is uninstalled.</li>
+  <li><strong>Your QAid server:</strong> When you save a recording, the captured actions are sent to your self-hosted QAid server instance. The server URL is configured by you.</li>
+</ul>
+
+<div class="highlight">
+  <strong>No external servers:</strong> Recorded data is never sent to QAid's servers, third-party analytics services, or any destination other than the QAid server URL you configure.
+</div>
+
+<h2>5. How Data Is Used</h2>
+<p>All collected data is used exclusively to:</p>
+<ul>
+  <li>Generate automated Playwright test scripts from your recorded interactions</li>
+  <li>Resolve element selectors for reliable test targeting</li>
+  <li>Maintain recording state across browser sessions</li>
+</ul>
+
+<h2>6. Data Sharing</h2>
+<p>We do not sell, transfer, or share user data with third parties. Recorded data is transmitted only to the QAid server URL that you configure.</p>
+
+<h2>7. Data Retention</h2>
+<ul>
+  <li><strong>Local storage:</strong> Recording data is cleared when you finish and save a recording, start a new recording, or uninstall the extension.</li>
+  <li><strong>Server storage:</strong> Data retention on your QAid server is governed by your own server configuration and policies.</li>
+</ul>
+
+<h2>8. Your Controls</h2>
+<ul>
+  <li>Recording only starts when you explicitly click the record button</li>
+  <li>You can delete individual recorded actions before saving</li>
+  <li>You can stop recording at any time</li>
+  <li>Uninstalling the extension removes all locally stored data</li>
+</ul>
+
+<h2>9. Permissions</h2>
+<p>The extension requests browser permissions necessary for its recording functionality. Each permission and its justification are listed on the <a href="https://chromewebstore.google.com/detail/qaid-recorder">Chrome Web Store listing</a>. No permissions are used for purposes beyond test recording.</p>
+
+<h2>10. Changes to This Policy</h2>
+<p>We may update this privacy policy to reflect changes in the extension's functionality. The "Last updated" date at the top will be revised accordingly. Continued use of the extension after changes constitutes acceptance of the updated policy.</p>
+
+<h2>11. Contact</h2>
+<p>If you have questions about this privacy policy or the extension's data practices, contact us at:</p>
+<p><a href="mailto:TODO@example.com">TODO@example.com</a></p>
+
+</body>
+</html>
